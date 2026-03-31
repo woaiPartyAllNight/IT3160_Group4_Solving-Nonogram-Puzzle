@@ -1,10 +1,10 @@
 
 # IT3160_Group4_Solving-Nonogram-Puzzle
 ## Nội dung chính
-- [Giới thiệu về trò chơi](##giới-thieu-về-trò-chơi)
-- [Cài đặt môi trường](##cài-đặt-môi-trường)
-- [Thành viên nhóm](##thành-viên-nhóm)
-- [Files and Directories in the repository](##files-and-directories-in-the-repository)
+- [Giới thiệu về trò chơi](#giới-thiệu-về-trò-chơi)
+- [Cài đặt môi trường](#cài-đặt-môi-trường)
+- [Thành viên nhóm](#thành-viên-nhóm)
+- [Files and Directories in the repository](#files-and-directories-in-the-repository)
 
 ## Giới thiệu về trò chơi
 Trò chơi được lên ý tưởng bới 2 người Nhật Bản với mục tiêu tái tạo các hình ảnh bằng một bảng lưới với các giá trị đen trắng(nhị phân). <br>
