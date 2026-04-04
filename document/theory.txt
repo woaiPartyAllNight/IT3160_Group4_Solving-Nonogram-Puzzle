@@ -1,0 +1,16 @@
+digit_classifier: Mã hóa ảnh và nhận diện các con số trong tập mẫu
+digit_detector: Mã hóa ảnh, đọc các số gợi ý từng hàng và cột. Ghép (nhiều hơn 1 chữ số) và sắp xếp các số theo hàng ngang (dọc)
+
+line_dectector_functions:
+    Với những ảnh đơn giản như bảng nonogram (chỉ có 2 màu đen, trắng) có thể nhị phân hóa bức ảnh -> dễ xử lý
+    kernel: Như một "cửa sổ" nhỏ trượt trên ảnh. Có thể sử dụng kernel để quét các pixel ảnh
+    Phép Morphology Open (Phép toán hình thái học - Phép Mở): Là sự kết hợp của 2 hành động: Ăn mòn (Erosion) và Phình to (Dilation)
+    Ăn mòn: Xóa các cụm pixel trắng không giống lines (Như các số, đường dọc, ...)
+    Phình to: Ăn mòn có thể khiến các lines bị khuyết 1 số pixel, phép này giúp các lines được hoàn thiện.
+    
+    Các bước trên giúp nhận diện các đường kẻ ngang (hoặc dọc) nhưng nếu đổi góc chụp có thể không chạy đc
+    -> Có thể xử lý bằng một phép toán đạo hàm hoặc áp dụng thuật toán xoay góc nghiêng về góc chính diện.
+
+line_dectector:
+    Áp dụng thuật toán lược đồ chiếu (Image Protection Profile): Quét các đường kẻ đã được tô sáng để biết vị trí của đường kẻ nằm ở vị trí pixel nào. Kiểm tra xem hàm (cột) có tổng số pixel trắng lớn thì đó là hàng (cột) được tìm. Dữ liệu có thể bị nhiễu nên ta trả về trọng tâm của "núi" dữ liệu đó để dại diện cho lines.
+    
