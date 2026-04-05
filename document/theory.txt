@@ -14,3 +14,7 @@ line_dectector_functions:
 line_dectector:
     Áp dụng thuật toán lược đồ chiếu (Image Protection Profile): Quét các đường kẻ đã được tô sáng để biết vị trí của đường kẻ nằm ở vị trí pixel nào. Kiểm tra xem hàm (cột) có tổng số pixel trắng lớn thì đó là hàng (cột) được tìm. Dữ liệu có thể bị nhiễu nên ta trả về trọng tâm của "núi" dữ liệu đó để dại diện cho lines.
     
+nonogram_detector:
+    binary_fn: Chuyển ảnh xám về ảnh nhị phân (làm nổi bật các đường kẻ của khung lưới và loại bỏ các chi tiết nhiễu về màu sắc, ánh sáng đổ bóng)
+    rectangle_fn: Nhận dạng hình dáng, chứa các thuật toán phân tích nét vẽ để kiểm tra đa giác lồi (ở đây là các hình chữ nhật). Nó còn giúp làm rõ nét hơn các đường kẻ sau khi nhị phân hóa
+    nonogram_detector: 
