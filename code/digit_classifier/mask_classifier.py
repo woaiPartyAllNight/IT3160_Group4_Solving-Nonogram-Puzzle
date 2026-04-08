@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import time
 from pathlib import Path
-from picture_solver.util.benchmark import timeit
+from util.benchmark import timeit
 
 # Giả lập Config nếu bạn chưa có file config.py
 class Config:

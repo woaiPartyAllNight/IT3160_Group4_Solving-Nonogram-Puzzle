@@ -41,8 +41,8 @@ def logical(board, bound, row_list, col_list, m, n):
 
                 # Các rule block (2.1, 2.2, 1.1, 3.1, 3.2)
                 for func in [apply_rule2_1_block_row, apply_rule2_2_block_row,
-                             apply_rule1_1_block_row, apply_rule3_1_block_row,
-                             apply_rule3_2_block_row]:
+                            apply_rule1_1_block_row, apply_rule3_1_block_row,
+                            apply_rule3_2_block_row]:
                     valid, ch = func(board, bound, i, k, row_list, previous_end, forward_start, m, n)
                     if not valid:
                         return False
@@ -82,8 +82,8 @@ def logical(board, bound, row_list, col_list, m, n):
 
                 # Các rule block (2.1, 2.2, 1.1, 3.1, 3.2)
                 for func in [apply_rule2_1_block_col, apply_rule2_2_block_col,
-                             apply_rule1_1_block_col, apply_rule3_1_block_col,
-                             apply_rule3_2_block_col]:
+                            apply_rule1_1_block_col, apply_rule3_1_block_col,
+                            apply_rule3_2_block_col]:
                     valid, ch = func(board, bound, j, k, col_list, previous_end, forward_start, m, n)
                     if not valid:
                         return False

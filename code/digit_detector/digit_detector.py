@@ -61,7 +61,7 @@ class DigitDetector:
 
         # 1. Quét hàng tiêu đề (Gợi ý cho các Cột)
         for i in range(1, len(lv) - 1):
-            x1, x2, y1, y2 = lv[i]+1, lv[i+1]-1, lh[0]+1, lh[1]-1
+            x1, x2, y1, y2 = int(lv[i]+1), int(lv[i+1]-1), int(lh[0]+1), int(lh[1]-1)
             cell_roi = binary_img[y1:y2, x1:x2]
             digits = self._process_cell(cell_roi, x1, y1, display_img)
             if digits:
@@ -71,7 +71,7 @@ class DigitDetector:
 
         # 2. Quét cột tiêu đề (Gợi ý cho các Hàng)
         for j in range(1, len(lh) - 1):
-            x1, x2, y1, y2 = lv[0]+1, lv[1]-1, lh[j]+1, lh[j+1]-1
+            x1, x2, y1, y2 = int(lv[0]+1), int(lv[1]-1), int(lh[j]+1), int(lh[j+1]-1)
             cell_roi = binary_img[y1:y2, x1:x2]
             digits = self._process_cell(cell_roi, x1, y1, display_img)
             if digits:
