@@ -1,7 +1,0 @@
-thứ tự các rule trình bày lại sao cho hợp lý: 
-rule2 siết chặt giới hạn lại trước để tiền xử lý
-rule3 xử lý khối với các ô đã biết
-overlapping trong rule1
-những cái còn lại của rule1 -> suy luận ra kết quả
-
-Sửa tên theo github demo
