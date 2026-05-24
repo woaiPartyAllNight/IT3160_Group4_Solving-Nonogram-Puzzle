@@ -1,6 +1,8 @@
+# QUY TẮC 2.3 (Thắt chặt giới hạn)
 def apply_rule2_3_segment_row(i, j, seg, fb, lb, board, bound, row_list, m, n):
     changed = False
 
+    # Quét xuôi: thắt chặt giới hạn kết thúc của khối nhỏ hơn
     for k in range(fb, lb+1):
         if row_list[i][k] >= seg:
             for kk in range(fb, k):
@@ -13,6 +15,7 @@ def apply_rule2_3_segment_row(i, j, seg, fb, lb, board, bound, row_list, m, n):
     else:
         return False, changed
 
+    # Quét ngược: thắt chặt giới hạn bắt đầu của khối nhỏ hơn
     for k in range(lb, fb-1, -1):
         if row_list[i][k] >= seg:
             for kk in range(lb, k, -1):
@@ -31,7 +34,7 @@ def apply_rule2_3_segment_row(i, j, seg, fb, lb, board, bound, row_list, m, n):
 def apply_rule2_3_segment_col(i, j, seg, fb, lb, board, bound, col_list, m, n):
     changed = False
     
-    # Forward scan
+    # Quét xuôi: thắt chặt giới hạn kết thúc của khối nhỏ hơn
     for k in range(fb, lb+1):
         if col_list[j][k] >= seg:
             for kk in range(fb, k):
@@ -44,7 +47,7 @@ def apply_rule2_3_segment_col(i, j, seg, fb, lb, board, bound, col_list, m, n):
     else:
         return False, changed
 
-    # Backward scan
+    # Quét ngược: thắt chặt giới hạn bắt đầu của khối nhỏ hơn
     for k in range(lb, fb-1, -1):
         if col_list[j][k] >= seg:
             for kk in range(lb, k, -1):

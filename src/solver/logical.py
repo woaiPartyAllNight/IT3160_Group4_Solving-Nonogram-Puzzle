@@ -31,18 +31,18 @@ def logical(board, bound, row_list, col_list, m, n, visualize=False):
     while change:
         change = False
         
-        # display
+        # Hiển thị bảng
         if visualize:
             clear_output(wait=True)
             display_board(board)
 
-        # ==================== ROWS ====================
+        # ==================== HÀNG ====================
         for i in range(m):
             for k in range(len(row_list[i])):
                 previous_end = -1 if k == 0 else bound[0][i][k-1][1]
                 forward_start = n if k == len(row_list[i])-1 else bound[0][i][k+1][0]
 
-                # Các rule block (2.1, 2.2, 1.1, 3.1, 3.2)
+                # Áp dụng các quy tắc khối (2.1, 2.2, 1.1, 3.1, 3.2)
                 for func in [apply_rule2_1_block_row, apply_rule2_2_block_row,
                             apply_rule1_1_block_row, apply_rule3_1_block_row,
                             apply_rule3_2_block_row]:
@@ -54,7 +54,7 @@ def logical(board, bound, row_list, col_list, m, n, visualize=False):
                         if visualize: display_board(board)
                     change |= ch
 
-                # Rule 3.3 first block
+                # Quy tắc 3.3 cho khối đầu tiên
                 if bound[0][i][k][0] > previous_end:
                     valid, ch = apply_rule3_3_first_block_row(board, bound, i, k, row_list, previous_end, forward_start, m, n)
                     if not valid:
@@ -64,7 +64,7 @@ def logical(board, bound, row_list, col_list, m, n, visualize=False):
                         if visualize: display_board(board)
                     change |= ch
 
-                # Rule 3.3 last block
+                # Quy tắc 3.3 cho khối cuối cùng
                 if bound[0][i][k][1] < forward_start:
                     valid, ch = apply_rule3_3_last_block_row(board, bound, i, k, row_list, previous_end, forward_start, m, n)
                     if not valid:
@@ -74,20 +74,20 @@ def logical(board, bound, row_list, col_list, m, n, visualize=False):
                         if visualize: display_board(board)
                     change |= ch
 
-            # Cell scanning cho row
+            # Quét ô (Cell scanning) cho hàng
             valid, ch = apply_rule1_cell_scanning_row(i, board, bound, row_list, m, n)
             if not valid:
                 print(f"Failed at apply_rule1_cell_scanning_row for row {i}")
                 return False
             change |= ch
 
-        # ==================== COLUMNS ====================
+        # ==================== CỘT ====================
         for j in range(n):
             for k in range(len(col_list[j])):
                 previous_end = -1 if k == 0 else bound[1][j][k-1][1]
                 forward_start = m if k == len(col_list[j])-1 else bound[1][j][k+1][0]
 
-                # Các rule block (2.1, 2.2, 1.1, 3.1, 3.2)
+                # Áp dụng các quy tắc khối (2.1, 2.2, 1.1, 3.1, 3.2)
                 for func in [apply_rule2_1_block_col, apply_rule2_2_block_col,
                             apply_rule1_1_block_col, apply_rule3_1_block_col,
                             apply_rule3_2_block_col]:
@@ -99,7 +99,7 @@ def logical(board, bound, row_list, col_list, m, n, visualize=False):
                         if visualize: display_board(board)
                     change |= ch
 
-                # Rule 3.3 first block
+                # Quy tắc 3.3 cho khối đầu tiên
                 if bound[1][j][k][0] > previous_end:
                     valid, ch = apply_rule3_3_first_block_col(board, bound, j, k, col_list, previous_end, forward_start, m, n)
                     if not valid:
@@ -109,7 +109,7 @@ def logical(board, bound, row_list, col_list, m, n, visualize=False):
                         if visualize: display_board(board)
                     change |= ch
 
-                # Rule 3.3 last block
+                # Quy tắc 3.3 cho khối cuối cùng
                 if bound[1][j][k][1] < forward_start:
                     valid, ch = apply_rule3_3_last_block_col(board, bound, j, k, col_list, previous_end, forward_start, m, n)
                     if not valid:
@@ -119,7 +119,7 @@ def logical(board, bound, row_list, col_list, m, n, visualize=False):
                         if visualize: display_board(board)
                     change |= ch
 
-            # Cell scanning cho column
+            # Quét ô (Cell scanning) cho cột
             valid, ch = apply_rule1_cell_scanning_col(j, board, bound, col_list, m, n)
             if not valid:
                 print(f"Failed at apply_rule1_cell_scanning_col for col {j}")

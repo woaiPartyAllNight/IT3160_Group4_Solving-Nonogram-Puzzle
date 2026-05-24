@@ -1,0 +1,6 @@
+Kích thước,Số test,Tỉ lệ giải được,Thời gian trung bình,Ghi chú
+5x5,20,100.0%,0.740s,"dễ, chạy ổn định"
+10x10,20,100.0%,0.726s,"dễ, chạy ổn định"
+15x15,10,100.0%,0.738s,"trung bình, chạy ổn định"
+25x25,5,100.0%,0.729s,"khó, thời gian chạy lớn"
+50x50,3,100.0%,0.890s,"rất khó, chạy ổn định"

@@ -7,15 +7,11 @@ class TimeoutException(Exception):
     pass
 
 def get_mrv_cell(board, m, n):
-    """
-    Find the most constrained unfilled cell (MRV heuristic).
-    We define 'most constrained' as the cell belonging to the row and column
-    that have the fewest unknown cells (0s).
-    """
+    """Tìm ô trống bị ràng buộc nhiều nhất (heuristic MRV) dựa trên số ô chưa biết."""
     best_cell = None
     min_unknowns = float('inf')
     
-    # Precompute unknowns per row and column
+    # Tính trước số ô chưa biết trên mỗi hàng và cột
     row_unknowns = [sum(1 for j in range(n) if board[i][j] == 0) for i in range(m)]
     col_unknowns = [sum(1 for i in range(m) if board[i][j] == 0) for j in range(n)]
     
@@ -39,14 +35,14 @@ def backtrack(currboard, currbound, row_list, col_list, m, n, solutions, time_li
     cell = get_mrv_cell(currboard, m, n)
     
     if cell is None:
-        # No empty cells left
+        # Khi không còn ô trống nào trên bảng
         if check(currboard, row_list, col_list):
             solutions.append(copy.deepcopy(currboard))
         return
 
     i, j = cell
 
-    # Try setting to -1 (cross) first, then 1 (fill)
+    # Thử đặt ô là -1 (dấu X) trước, sau đó là 1 (tô đen)
     newboard = copy.deepcopy(currboard)
     newbound = copy.deepcopy(currbound)
     newboard[i][j] = -1

@@ -3,7 +3,7 @@ from solver.rules.segment_utils import apply_rule2_3_segment_row, apply_rule2_3_
 
 
 
-# RULE 1.2 + 1.3 + 1.4 + 1.5 (Cell scanning) 
+# QUY TẮC 1.2 - 1.5 (Quét ô cho hàng)
 def apply_rule1_cell_scanning_row(i, board, bound, row_list, m, n):
     changed = False
     fb = 0
@@ -11,7 +11,7 @@ def apply_rule1_cell_scanning_row(i, board, bound, row_list, m, n):
     seg = 0
     last_blank = -1
     for j in range(n):
-        # rule 1.3: all current black runs have size 1 at the start of a block range
+        # Quy tắc 1.3: Đánh dấu X trước khối 1 ô ở đầu giới hạn
         if lb < len(row_list[i])-1 and j == bound[0][i][lb+1][0]:
             if board[i][j] == 1 and j > 0:
                 if all(row_list[i][k] == 1 for k in range(fb, lb+1)):
@@ -32,7 +32,7 @@ def apply_rule1_cell_scanning_row(i, board, bound, row_list, m, n):
             last_blank = j
 
         if board[i][j] == 1:
-            # rule 1.5.1-3
+            # Quy tắc 1.5.1-3: Tô đen phần chắc chắn thuộc khối khi gặp ô đen
             blank_ahead = [n, True]
             for jj in range(j+1, min(n, j+min_run)):
                 if jj < last_blank + min_run:
@@ -58,7 +58,7 @@ def apply_rule1_cell_scanning_row(i, board, bound, row_list, m, n):
 
             seg += 1
             if j == n-1 or board[i][j+1] != 1:
-                # rule 1.5.4
+                # Quy tắc 1.5.4: Đặt dấu X hai đầu khi khối đen đạt độ dài tối đa
                 if min_run == max_run == seg:
                     if j-seg >= 0:
                         if board[i][j-seg] == 1:
@@ -72,14 +72,14 @@ def apply_rule1_cell_scanning_row(i, board, bound, row_list, m, n):
                         if board[i][j+1] == 0:
                             board[i][j+1] = -1
                             changed = True
-                # rule 2.3
+                # Quy tắc 2.3: Thắt chặt giới hạn dựa trên phân đoạn hiện tại
                 valid, ch = apply_rule2_3_segment_row(i, j, seg, fb, lb, board, bound, row_list, m, n)
                 if not valid:
                     return False, changed
                 changed |= ch
                 seg = 0
 
-        # rule 1.2 + 1.4
+        # Quy tắc 1.2 & 1.4: Đánh dấu X vào ô không thể chứa khối đen nào
         if board[i][j] != 1:
             l = j
             while l > 0 and board[i][l-1] == 1:
@@ -92,7 +92,7 @@ def apply_rule1_cell_scanning_row(i, board, bound, row_list, m, n):
                     board[i][j] = -1
                     changed = True
 
-        # rule 1.3: all current black runs have size 1 at the end of a block range
+        # Quy tắc 1.3: Đánh dấu X sau khối 1 ô ở cuối giới hạn
         if fb < len(row_list[i]) and j == bound[0][i][fb][1]:
             fb += 1
             if board[i][j] == 1 and j < n-1:
@@ -105,6 +105,7 @@ def apply_rule1_cell_scanning_row(i, board, bound, row_list, m, n):
     return True, changed
 
 
+# QUY TẮC 1.2 - 1.5 (Quét ô cho cột)
 def apply_rule1_cell_scanning_col(j, board, bound, col_list, m, n):
     changed = False
     fb = 0
@@ -112,6 +113,7 @@ def apply_rule1_cell_scanning_col(j, board, bound, col_list, m, n):
     seg = 0
     last_blank = -1
     for i in range(m):
+        # Quy tắc 1.3: Đánh dấu X phía trên khối 1 ô ở đầu giới hạn
         if lb < len(col_list[j])-1 and i == bound[1][j][lb+1][0]:
             if board[i][j] == 1 and i > 0:
                 if all(col_list[j][k] == 1 for k in range(fb, lb+1)):
@@ -132,6 +134,7 @@ def apply_rule1_cell_scanning_col(j, board, bound, col_list, m, n):
             last_blank = i
 
         if board[i][j] == 1:
+            # Quy tắc 1.5.1-3: Tô đen phần chắc chắn thuộc khối khi gặp ô đen
             blank_ahead = [m, True]
             for ii in range(i+1, min(m, i+min_run)):
                 if ii < last_blank + min_run:
@@ -157,6 +160,7 @@ def apply_rule1_cell_scanning_col(j, board, bound, col_list, m, n):
 
             seg += 1
             if i == m-1 or board[i+1][j] != 1:
+                # Quy tắc 1.5.4: Đặt dấu X hai đầu khi khối đen đạt độ dài tối đa
                 if min_run == max_run == seg:
                     if i-seg >= 0:
                         if board[i-seg][j] == 1:
@@ -170,12 +174,14 @@ def apply_rule1_cell_scanning_col(j, board, bound, col_list, m, n):
                         if board[i+1][j] == 0:
                             board[i+1][j] = -1
                             changed = True
+                # Quy tắc 2.3: Thắt chặt giới hạn dựa trên phân đoạn hiện tại
                 valid, ch = apply_rule2_3_segment_col(i, j, seg, fb, lb, board, bound, col_list, m, n)
                 if not valid:
                     return False, changed
                 changed |= ch
                 seg = 0
 
+        # Quy tắc 1.2 & 1.4: Đánh dấu X vào ô không thể chứa khối đen nào
         if board[i][j] != 1:
             l = i
             while l > 0 and board[l-1][j] == 1:
@@ -188,6 +194,7 @@ def apply_rule1_cell_scanning_col(j, board, bound, col_list, m, n):
                     board[i][j] = -1
                     changed = True
 
+        # Quy tắc 1.3: Đánh dấu X phía dưới khối 1 ô ở cuối giới hạn
         if fb < len(col_list[j]) and i == bound[1][j][fb][1]:
             fb += 1
             if board[i][j] == 1 and i < m-1:

@@ -1,0 +1,59 @@
+﻿size,index,shape,input_file,solution_file,filled_cells,max_row_groups,max_col_groups,note
+5x5,1,heart,5x5/inputs/5x5_01_heart.txt,5x5/solutions/5x5_01_heart_solution.txt,16,2,1,dễ
+5x5,2,x_mark,5x5/inputs/5x5_02_x_mark.txt,5x5/solutions/5x5_02_x_mark_solution.txt,9,2,2,dễ
+5x5,3,plus,5x5/inputs/5x5_03_plus.txt,5x5/solutions/5x5_03_plus_solution.txt,9,1,1,dễ
+5x5,4,diamond,5x5/inputs/5x5_04_diamond.txt,5x5/solutions/5x5_04_diamond_solution.txt,13,1,1,dễ
+5x5,5,house,5x5/inputs/5x5_05_house.txt,5x5/solutions/5x5_05_house_solution.txt,17,3,2,dễ
+5x5,6,smile,5x5/inputs/5x5_06_smile.txt,5x5/solutions/5x5_06_smile_solution.txt,18,3,3,dễ
+5x5,7,arrow,5x5/inputs/5x5_07_arrow.txt,5x5/solutions/5x5_07_arrow_solution.txt,11,1,1,dễ
+5x5,8,tree,5x5/inputs/5x5_08_tree.txt,5x5/solutions/5x5_08_tree_solution.txt,13,1,2,dễ
+5x5,9,fish,5x5/inputs/5x5_09_fish.txt,5x5/solutions/5x5_09_fish_solution.txt,16,3,3,dễ
+5x5,10,star,5x5/inputs/5x5_10_star.txt,5x5/solutions/5x5_10_star_solution.txt,11,3,2,dễ
+5x5,11,boat,5x5/inputs/5x5_11_boat.txt,5x5/solutions/5x5_11_boat_solution.txt,11,1,1,dễ
+5x5,12,crown,5x5/inputs/5x5_12_crown.txt,5x5/solutions/5x5_12_crown_solution.txt,21,3,2,dễ
+5x5,13,ghost,5x5/inputs/5x5_13_ghost.txt,5x5/solutions/5x5_13_ghost_solution.txt,19,3,2,dễ
+5x5,14,cat,5x5/inputs/5x5_14_cat.txt,5x5/solutions/5x5_14_cat_solution.txt,18,3,2,dễ
+5x5,15,cup,5x5/inputs/5x5_15_cup.txt,5x5/solutions/5x5_15_cup_solution.txt,15,2,2,dễ
+5x5,16,moon,5x5/inputs/5x5_16_moon.txt,5x5/solutions/5x5_16_moon_solution.txt,12,1,2,dễ
+5x5,17,music,5x5/inputs/5x5_17_music.txt,5x5/solutions/5x5_17_music_solution.txt,11,1,1,dễ
+5x5,18,rocket,5x5/inputs/5x5_18_rocket.txt,5x5/solutions/5x5_18_rocket_solution.txt,13,2,2,dễ
+5x5,19,flower,5x5/inputs/5x5_19_flower.txt,5x5/solutions/5x5_19_flower_solution.txt,16,2,2,dễ
+5x5,20,umbrella,5x5/inputs/5x5_20_umbrella.txt,5x5/solutions/5x5_20_umbrella_solution.txt,13,2,2,dễ
+10x10,1,heart,10x10/inputs/10x10_01_heart.txt,10x10/solutions/10x10_01_heart_solution.txt,35,1,1,trung bình
+10x10,2,star,10x10/inputs/10x10_02_star.txt,10x10/solutions/10x10_02_star_solution.txt,25,2,1,trung bình
+10x10,3,diamond,10x10/inputs/10x10_03_diamond.txt,10x10/solutions/10x10_03_diamond_solution.txt,28,2,2,trung bình
+10x10,4,smiley,10x10/inputs/10x10_04_smiley.txt,10x10/solutions/10x10_04_smiley_solution.txt,58,3,2,trung bình
+10x10,5,house,10x10/inputs/10x10_05_house.txt,10x10/solutions/10x10_05_house_solution.txt,42,3,2,trung bình
+10x10,6,cat,10x10/inputs/10x10_06_cat.txt,10x10/solutions/10x10_06_cat_solution.txt,48,2,1,trung bình
+10x10,7,rocket,10x10/inputs/10x10_07_rocket.txt,10x10/solutions/10x10_07_rocket_solution.txt,30,2,2,trung bình
+10x10,8,fish,10x10/inputs/10x10_08_fish.txt,10x10/solutions/10x10_08_fish_solution.txt,31,2,1,trung bình
+10x10,9,tree,10x10/inputs/10x10_09_tree.txt,10x10/solutions/10x10_09_tree_solution.txt,42,1,1,trung bình
+10x10,10,umbrella,10x10/inputs/10x10_10_umbrella.txt,10x10/solutions/10x10_10_umbrella_solution.txt,35,1,1,trung bình
+10x10,11,music_note,10x10/inputs/10x10_11_music_note.txt,10x10/solutions/10x10_11_music_note_solution.txt,29,2,2,trung bình
+10x10,12,flower,10x10/inputs/10x10_12_flower.txt,10x10/solutions/10x10_12_flower_solution.txt,42,2,2,trung bình
+10x10,13,crown,10x10/inputs/10x10_13_crown.txt,10x10/solutions/10x10_13_crown_solution.txt,49,3,2,trung bình
+10x10,14,key,10x10/inputs/10x10_14_key.txt,10x10/solutions/10x10_14_key_solution.txt,19,2,2,trung bình
+10x10,15,ghost,10x10/inputs/10x10_15_ghost.txt,10x10/solutions/10x10_15_ghost_solution.txt,43,3,2,trung bình
+10x10,16,robot,10x10/inputs/10x10_16_robot.txt,10x10/solutions/10x10_16_robot_solution.txt,48,1,1,trung bình
+10x10,17,butterfly,10x10/inputs/10x10_17_butterfly.txt,10x10/solutions/10x10_17_butterfly_solution.txt,54,2,2,trung bình
+10x10,18,moon,10x10/inputs/10x10_18_moon.txt,10x10/solutions/10x10_18_moon_solution.txt,22,1,2,trung bình
+10x10,19,sun,10x10/inputs/10x10_19_sun.txt,10x10/solutions/10x10_19_sun_solution.txt,32,3,3,trung bình
+10x10,20,duck,10x10/inputs/10x10_20_duck.txt,10x10/solutions/10x10_20_duck_solution.txt,33,2,1,trung bình
+15x15,1,rocket,15x15/inputs/15x15_01_rocket.txt,15x15/solutions/15x15_01_rocket_solution.txt,73,3,2,khó
+15x15,2,cat,15x15/inputs/15x15_02_cat.txt,15x15/solutions/15x15_02_cat_solution.txt,100,3,2,khó
+15x15,3,butterfly,15x15/inputs/15x15_03_butterfly.txt,15x15/solutions/15x15_03_butterfly_solution.txt,115,2,1,khó
+15x15,4,castle,15x15/inputs/15x15_04_castle.txt,15x15/solutions/15x15_04_castle_solution.txt,117,5,2,khó
+15x15,5,swan,15x15/inputs/15x15_05_swan.txt,15x15/solutions/15x15_05_swan_solution.txt,68,2,2,khó
+15x15,6,skull,15x15/inputs/15x15_06_skull.txt,15x15/solutions/15x15_06_skull_solution.txt,92,3,2,khó
+15x15,7,anchor,15x15/inputs/15x15_07_anchor.txt,15x15/solutions/15x15_07_anchor_solution.txt,43,3,3,khó
+15x15,8,trophy,15x15/inputs/15x15_08_trophy.txt,15x15/solutions/15x15_08_trophy_solution.txt,97,3,3,khó
+15x15,9,robot,15x15/inputs/15x15_09_robot.txt,15x15/solutions/15x15_09_robot_solution.txt,105,3,2,khó
+15x15,10,flower,15x15/inputs/15x15_10_flower.txt,15x15/solutions/15x15_10_flower_solution.txt,84,2,2,khó
+25x25,1,dragon,25x25/inputs/25x25_01_dragon.txt,25x25/solutions/25x25_01_dragon_solution.txt,169,3,3,khó
+25x25,2,city,25x25/inputs/25x25_02_city.txt,25x25/solutions/25x25_02_city_solution.txt,336,5,2,khó
+25x25,3,space,25x25/inputs/25x25_03_space.txt,25x25/solutions/25x25_03_space_solution.txt,192,3,3,khó
+25x25,4,castle,25x25/inputs/25x25_04_castle.txt,25x25/solutions/25x25_04_castle_solution.txt,305,6,3,khó
+25x25,5,swan,25x25/inputs/25x25_05_swan.txt,25x25/solutions/25x25_05_swan_solution.txt,171,3,4,khó
+50x50,1,dragon,50x50/inputs/50x50_01_dragon.txt,50x50/solutions/50x50_01_dragon_solution.txt,622,3,3,rất khó
+50x50,2,city,50x50/inputs/50x50_02_city.txt,50x50/solutions/50x50_02_city_solution.txt,1300,8,2,rất khó
+50x50,3,space,50x50/inputs/50x50_03_space.txt,50x50/solutions/50x50_03_space_solution.txt,691,3,3,rất khó
