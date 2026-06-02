@@ -44,12 +44,8 @@ IT3160_Group4_Solving-Nonogram-Puzzle/
 │   │       ├── anchor_propagation.py   # Quy tắc 3: lan truyền từ ô cố định
 │   │       └── segment_utils.py        # Tiện ích xử lý đoạn
 │   │
-│   └── tests/                    # Các bài kiểm thử
-│       ├── test_init_bound.py
-│       ├── test_rules.py
-│       └── test_pipeline.py
 │
-├── result/                       # Kết quả mẫu dạng file .txt
+│── benchmark.py                  # Tool chạy code để kiểm thử thời gian
 └── README.md
 ```
 
@@ -222,5 +218,12 @@ Cách tiếp cận này đảm bảo tìm được toàn bộ nghiệm hợp l�
 
 ## Nguồn tham khảo
 
-- [Nonogram — Wikipedia](https://en.wikipedia.org/wiki/Nonogram)
-- Tài liệu môn học IT3160 — Trường Đại học Bách Khoa Hà Nội
+[1] Chiung-Hsueh Yu, Hui-Lung Lee, Ling-Hwei Chen, “An efficient algorithm for solving
+nonograms”, Applied Intelligence, Springer, 2011.
+[2] Nobuhisa Ueda, Tadaaki Nagao, “NP-completeness results for NONOGRAM via
+parsimonious reductions”, Technical Report TR96-0008, Tokyo Institute of Technology,
+1996.
+[3] K. J. Batenburg, W. A. Kosters, “Solving Nonograms by combining relaxations”, Pattern
+Recognition, 2009.
+[4] Stuart Russell, Peter Norvig, Artificial Intelligence: A Modern Approach, Pearson.
+[5] Wikipedia contributors, “Nonogram”, Wikipedia, The Free Encyclopedia.
