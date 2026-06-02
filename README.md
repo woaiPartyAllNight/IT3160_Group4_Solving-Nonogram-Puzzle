@@ -195,7 +195,7 @@ Khi biến `use_visualize = True` trong `main.py`, chương trình mở một c�
       <em>Hình 2. Trực quan hóa bằng visualizer khi ở trạng thái bắt đầu</em>
     </td>
     <td align="center" width="50%">
-      <img src="test/output_start.png" width="450">
+      <img src="test/output_end.png" width="450">
       <br>
       <em>Hình 3. Trực quan hóa bằng visualizer khi ở trạng thái kết thúc</em>
     </td>
