@@ -19,6 +19,14 @@
 
 Tham khảo thêm: [Nonogram — Wikipedia](https://en.wikipedia.org/wiki/Nonogram)
 
+<p align="center">
+  <img src="test/Nonogram_example.png" width="500">
+</p>
+
+<p align="center">
+  <em>Hình 1. Ví dụ minh họa Nonogram 5×5 với hình trái tim đơn giản</em>
+</p>
+
 **Mục tiêu của chương trình** là tự động giải các bài toán Nonogram với kích thước tùy ý (điển hình từ 5x5 đến 50x50) dựa trên bộ gợi ý hàng và cột được cung cấp dưới dạng file văn bản. Chương trình áp dụng kết hợp suy luận logic và tìm kiếm có quay lui để tìm ra toàn bộ nghiệm hợp lệ, đồng thời cung cấp giao diện trực quan hóa từng bước giải bằng thư viện Pygame.
 
 ---
@@ -178,6 +186,21 @@ Khi biến `use_visualize = True` trong `main.py`, chương trình mở một c�
 - Hỗ trợ điều hướng bằng phím mũi tên trái/phải.
 
 Để tắt visualizer (chạy nhanh hơn), đặt `use_visualize = False` trong `src/solver/main.py`.
+
+<table align="center">
+  <tr>
+    <td align="center" width="50%">
+      <img src="test/output_end.png" width="450" height="300">
+      <br>
+      <em>Hình 3. Trực quan hóa bằng visualizer khi ở trạng thái kết thúc</em>
+    </td>
+    <td align="center" width="50%">
+      <img src="test/output_start.png" width="450" height="300">
+      <br>
+      <em>Hình 2. Trực quan hóa bằng visualizer khi ở trạng thái bắt đầu</em>
+    </td>
+  </tr>
+</table>
 
 ---
 
