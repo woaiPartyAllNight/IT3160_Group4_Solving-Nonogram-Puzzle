@@ -218,12 +218,12 @@ Cách tiếp cận này đảm bảo tìm được toàn bộ nghiệm hợp l�
 
 ## Nguồn tham khảo
 
-[1] Chiung-Hsueh Yu, Hui-Lung Lee, Ling-Hwei Chen, “An efficient algorithm for solving
-nonograms”, Applied Intelligence, Springer, 2011.
-[2] Nobuhisa Ueda, Tadaaki Nagao, “NP-completeness results for NONOGRAM via
-parsimonious reductions”, Technical Report TR96-0008, Tokyo Institute of Technology,
-1996.
-[3] K. J. Batenburg, W. A. Kosters, “Solving Nonograms by combining relaxations”, Pattern
-Recognition, 2009.
+[1] Chiung-Hsueh Yu, Hui-Lung Lee, Ling-Hwei Chen, “An efficient algorithm for solving nonograms”, Applied Intelligence, Springer, 2011.
+
+[2] Nobuhisa Ueda, Tadaaki Nagao, “NP-completeness results for NONOGRAM viaparsimonious reductions”, Technical Report TR96-0008, Tokyo Institute of Technology, 1996.
+
+[3] K. J. Batenburg, W. A. Kosters, “Solving Nonograms by combining relaxations”, Pattern Recognition, 2009.
+
 [4] Stuart Russell, Peter Norvig, Artificial Intelligence: A Modern Approach, Pearson.
+
 [5] Wikipedia contributors, “Nonogram”, Wikipedia, The Free Encyclopedia.
